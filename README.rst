@@ -44,3 +44,14 @@ if virtual env isn't active then use:
 ::
 
    $ pipenv run make
+
+Misc
+-------------------------
+ psql postgres://<user>:<pass>@52.15.35.94:80/sample -c "SELECT count(id) FROM employees;"
+
+ sshpass -p <pass> ssh cloud_user@3.21.246.52
+
+
+ pgbackup --driver local ./local-dump.sql 'postgres://<user>:<pass>@52.15.35.94:80/sample'
+
+ pgbackup --driver s3 pyscripting-db-backups-2 'postgres://<user>:<pass>@52.15.35.94:80/sample'
